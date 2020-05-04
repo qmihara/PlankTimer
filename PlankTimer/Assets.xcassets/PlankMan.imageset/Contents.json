@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "undou_front_bridge_man.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
