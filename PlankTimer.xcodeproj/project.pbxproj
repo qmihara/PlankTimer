@@ -18,7 +18,6 @@
 		1021375D245D7D5F005C93AD /* IntervalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1021375C245D7D5F005C93AD /* IntervalView.swift */; };
 		10213760245D7DEF005C93AD /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1021375F245D7DEF005C93AD /* ViewState.swift */; };
 		10213762245D9F0B005C93AD /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10213761245D9F0B005C93AD /* Store.swift */; };
-		10213764245DA20D005C93AD /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10213763245DA20D005C93AD /* CountdownView.swift */; };
 		10213766245DA260005C93AD /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10213765245DA260005C93AD /* ProgressView.swift */; };
 		10213768245DC0D7005C93AD /* ChallengeMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10213767245DC0D7005C93AD /* ChallengeMenu.swift */; };
 		1021376A245E91F1005C93AD /* ChallengeRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10213769245E91F1005C93AD /* ChallengeRecord.swift */; };
@@ -52,7 +51,6 @@
 		1021375C245D7D5F005C93AD /* IntervalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalView.swift; sourceTree = "<group>"; };
 		1021375F245D7DEF005C93AD /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
 		10213761245D9F0B005C93AD /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
-		10213763245DA20D005C93AD /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
 		10213765245DA260005C93AD /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		10213767245DC0D7005C93AD /* ChallengeMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeMenu.swift; sourceTree = "<group>"; };
 		10213769245E91F1005C93AD /* ChallengeRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeRecord.swift; sourceTree = "<group>"; };
@@ -134,7 +132,6 @@
 			children = (
 				10213758245D7CB7005C93AD /* ChallengeView.swift */,
 				10213739245D5A82005C93AD /* ContentView.swift */,
-				10213763245DA20D005C93AD /* CountdownView.swift */,
 				1021375A245D7D51005C93AD /* FinishedView.swift */,
 				1021375C245D7D5F005C93AD /* IntervalView.swift */,
 				10213765245DA260005C93AD /* ProgressView.swift */,
@@ -262,7 +259,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10213764245DA20D005C93AD /* CountdownView.swift in Sources */,
 				10213759245D7CB7005C93AD /* ChallengeView.swift in Sources */,
 				10213760245D7DEF005C93AD /* ViewState.swift in Sources */,
 				1021375B245D7D51005C93AD /* FinishedView.swift in Sources */,
