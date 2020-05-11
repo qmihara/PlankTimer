@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct IntervalView: View {
+    @EnvironmentObject var store: Store
+
     var body: some View {
         VStack {
             Image("SleepCat")
@@ -19,6 +21,9 @@ struct IntervalView: View {
             Text("今日はお休みです")
                 .font(.title)
                 .fontWeight(.heavy)
+        }
+        .onAppear {
+            self.store.saveRecord()
         }
     }
 }
