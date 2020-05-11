@@ -74,7 +74,8 @@ struct ChallengeView: View {
 
     private func countdown() {
         currentCount -= 0.1
-        currentProgress = Float((20 - currentCount) / 20)
+        let count = Double(self.count)
+        currentProgress = Float((count - currentCount) / count)
         if currentCount <= 0 {
             finishChallenge()
         }
