@@ -23,6 +23,7 @@
 		1021376A245E91F1005C93AD /* ChallengeRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10213769245E91F1005C93AD /* ChallengeRecord.swift */; };
 		1021376D245E9529005C93AD /* ChallengeRecordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1021376C245E9529005C93AD /* ChallengeRecordTests.swift */; };
 		1021376F245E9557005C93AD /* UserDefaultsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1021376E245E9557005C93AD /* UserDefaultsMock.swift */; };
+		10213771246ED3AC005C93AD /* ChallengeMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10213770246ED3AC005C93AD /* ChallengeMenuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		10213769245E91F1005C93AD /* ChallengeRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeRecord.swift; sourceTree = "<group>"; };
 		1021376C245E9529005C93AD /* ChallengeRecordTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeRecordTests.swift; sourceTree = "<group>"; };
 		1021376E245E9557005C93AD /* UserDefaultsMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsMock.swift; sourceTree = "<group>"; };
+		10213770246ED3AC005C93AD /* ChallengeMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeMenuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 		10213757245D5C22005C93AD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				10213770246ED3AC005C93AD /* ChallengeMenuView.swift */,
 				10213758245D7CB7005C93AD /* ChallengeView.swift */,
 				10213739245D5A82005C93AD /* ContentView.swift */,
 				1021375A245D7D51005C93AD /* FinishedView.swift */,
@@ -268,6 +271,7 @@
 				1021375D245D7D5F005C93AD /* IntervalView.swift in Sources */,
 				10213766245DA260005C93AD /* ProgressView.swift in Sources */,
 				10213738245D5A82005C93AD /* SceneDelegate.swift in Sources */,
+				10213771246ED3AC005C93AD /* ChallengeMenuView.swift in Sources */,
 				10213768245DC0D7005C93AD /* ChallengeMenu.swift in Sources */,
 				1021373A245D5A82005C93AD /* ContentView.swift in Sources */,
 			);

@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var store: Store
+    @State private var isChallengeMenuPresented = false
     @State private var isActionSheetPresented = false
 
     var body: some View {
@@ -32,6 +33,11 @@ struct ContentView: View {
             }
             .navigationBarTitle("DAY \(store.days)")
             .navigationBarItems(
+                leading: Button(action: {
+                    self.isChallengeMenuPresented = true
+                }, label: {
+                    Image(systemName: "flame")
+                }),
                 trailing: Button(action: {
                     self.isActionSheetPresented = true
                 }, label: {
@@ -51,6 +57,9 @@ struct ContentView: View {
                     .cancel(),
                 ]
             )
+        }
+        .sheet(isPresented: $isChallengeMenuPresented) {
+            ChallengeMenuView()
         }
     }
 }
