@@ -50,6 +50,12 @@ struct ChallengeView: View {
                 }
                 .padding()
                 .padding()
+                .onAppear {
+                    UIApplication.shared.isIdleTimerDisabled = true
+                }
+                .onDisappear {
+                    UIApplication.shared.isIdleTimerDisabled = false
+                }
             } else {
                 Button(action: {
                     self.startTimer()
