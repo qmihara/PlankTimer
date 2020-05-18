@@ -62,10 +62,10 @@ struct ChallengeView: View {
                 }) {
                     Text("チャレンジする")
                         .fontWeight(.black)
+                        .padding()
+                        .frame(maxWidth: .infinity)
                         .foregroundColor(.white)
                 }
-                .padding()
-                .frame(maxWidth: .infinity)
                 .background(Color.red)
                 .cornerRadius(40)
                 .padding()
