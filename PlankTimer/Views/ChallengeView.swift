@@ -8,10 +8,21 @@
 
 import SwiftUI
 
+private enum ChallengeViewState {
+    case initial
+    case challenging
+    case suspend
+
+    var isStarting: Bool {
+        return self != .initial
+    }
+}
+
 struct ChallengeView: View {
+
     @EnvironmentObject var store: Store
     var count: Int
-    @State private var isStarting: Bool = false
+    @State private var state: ChallengeViewState = .initial
     @State private var currentProgress: Float = 0
     @State private var currentCount: Double = 0
     @State private var timer: Timer.TimerPublisher = Timer.publish(every: 0, on: .current, in: .common) {
@@ -35,40 +46,84 @@ struct ChallengeView: View {
 
             Spacer()
 
-            Image(isStarting ? "PlankMan" : "StrechMan")
+            Image(state.isStarting ? "PlankMan" : "StrechMan")
                 .resizable()
                 .scaledToFit()
                 .frame(width: 120, height: 150, alignment: .bottom)
 
-            if isStarting {
-                Button(action: {
-                    self.prepareForRestart()
-                }) {
-                    Text("やり直す")
-                        .fontWeight(.black)
-                        .foregroundColor(.red)
-                }
-                .padding()
-                .padding()
-                .onAppear {
-                    UIApplication.shared.isIdleTimerDisabled = true
-                }
-                .onDisappear {
-                    UIApplication.shared.isIdleTimerDisabled = false
-                }
-            } else {
-                Button(action: {
-                    self.startTimer()
-                }) {
-                    Text("チャレンジする")
-                        .fontWeight(.black)
+            Group<AnyView> {
+                switch state {
+                case .initial:
+                    return AnyView(
+                        Button(action: {
+                            self.startChallenge()
+                        }) {
+                            Text("チャレンジする")
+                                .fontWeight(.black)
+                                .padding()
+                                .frame(maxWidth: .infinity)
+                                .foregroundColor(.white)
+                        }
+                        .background(Color.red)
+                        .cornerRadius(40)
                         .padding()
-                        .frame(maxWidth: .infinity)
-                        .foregroundColor(.white)
+                    )
+                case .challenging:
+                    return AnyView(
+                        Button(action: {
+                            self.suspendChallenge()
+                        }) {
+                            Text("ストップ")
+                                .fontWeight(.black)
+                                .padding()
+                                .frame(maxWidth: .infinity)
+                                .foregroundColor(.red)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 40)
+                                        .stroke(Color.red, lineWidth: 2)
+                                )
+                        }
+                        .padding()
+                        .onAppear {
+                            UIApplication.shared.isIdleTimerDisabled = true
+                        }
+                        .onDisappear {
+                            UIApplication.shared.isIdleTimerDisabled = false
+                        }
+                    )
+                case .suspend:
+                    return AnyView(
+                        HStack {
+                            Button(action: {
+                                self.prepareForRestart()
+                            }) {
+                                Text("やり直す")
+                                    .fontWeight(.black)
+                                    .padding()
+                                    .frame(maxWidth: .infinity)
+                                    .foregroundColor(.red)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 40)
+                                            .stroke(Color.red, lineWidth: 2)
+                                )
+                            }
+                            .padding()
+
+                            Button(action: {
+                                self.startChallenge()
+                            }) {
+                                Text("再開")
+                                    .fontWeight(.black)
+                                    .padding()
+                                    .frame(maxWidth: .infinity)
+                                    .foregroundColor(.white)
+                            }
+                            .background(Color.red)
+                            .cornerRadius(40)
+                            .padding()
+                        }
+                    )
                 }
-                .background(Color.red)
-                .cornerRadius(40)
-                .padding()
             }
         }.onReceive(timer) { _ in
             self.countdown()
@@ -90,22 +145,32 @@ struct ChallengeView: View {
     private func startTimer() {
         timer = Timer.publish(every: 0.1, on: .current, in: .common)
         _ = timer.connect()
-        isStarting = true
     }
 
     private func stopTimer() {
         timer.connect().cancel()
-        isStarting = false
+    }
+
+    private func startChallenge() {
+        startTimer()
+        state = .challenging
+    }
+
+    private func suspendChallenge() {
+        stopTimer()
+        state = .suspend
     }
 
     private func prepareForRestart() {
         stopTimer()
+        state = .initial
         currentCount = Double(count)
         currentProgress = 0
     }
 
     private func finishChallenge() {
         stopTimer()
+        state = .initial
         store.viewState = .finished
         store.saveRecord()
         currentCount = 0
