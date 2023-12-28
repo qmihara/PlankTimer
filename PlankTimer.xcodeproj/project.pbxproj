@@ -16,7 +16,6 @@
 		1021375D245D7D5F005C93AD /* IntervalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1021375C245D7D5F005C93AD /* IntervalView.swift */; };
 		10213760245D7DEF005C93AD /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1021375F245D7DEF005C93AD /* ViewState.swift */; };
 		10213762245D9F0B005C93AD /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10213761245D9F0B005C93AD /* Store.swift */; };
-		10213766245DA260005C93AD /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10213765245DA260005C93AD /* ProgressView.swift */; };
 		10213768245DC0D7005C93AD /* ChallengeMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10213767245DC0D7005C93AD /* ChallengeMenu.swift */; };
 		1021376A245E91F1005C93AD /* ChallengeRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10213769245E91F1005C93AD /* ChallengeRecord.swift */; };
 		1021376D245E9529005C93AD /* ChallengeRecordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1021376C245E9529005C93AD /* ChallengeRecordTests.swift */; };
@@ -49,7 +48,6 @@
 		1021375C245D7D5F005C93AD /* IntervalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalView.swift; sourceTree = "<group>"; };
 		1021375F245D7DEF005C93AD /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
 		10213761245D9F0B005C93AD /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
-		10213765245DA260005C93AD /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		10213767245DC0D7005C93AD /* ChallengeMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeMenu.swift; sourceTree = "<group>"; };
 		10213769245E91F1005C93AD /* ChallengeRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeRecord.swift; sourceTree = "<group>"; };
 		1021376C245E9529005C93AD /* ChallengeRecordTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeRecordTests.swift; sourceTree = "<group>"; };
@@ -134,7 +132,6 @@
 				10213739245D5A82005C93AD /* ContentView.swift */,
 				1021375A245D7D51005C93AD /* FinishedView.swift */,
 				1021375C245D7D5F005C93AD /* IntervalView.swift */,
-				10213765245DA260005C93AD /* ProgressView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -267,7 +264,6 @@
 				10213762245D9F0B005C93AD /* Store.swift in Sources */,
 				1021376A245E91F1005C93AD /* ChallengeRecord.swift in Sources */,
 				1021375D245D7D5F005C93AD /* IntervalView.swift in Sources */,
-				10213766245DA260005C93AD /* ProgressView.swift in Sources */,
 				10213771246ED3AC005C93AD /* ChallengeMenuView.swift in Sources */,
 				10213768245DC0D7005C93AD /* ChallengeMenu.swift in Sources */,
 				1021373A245D5A82005C93AD /* ContentView.swift in Sources */,

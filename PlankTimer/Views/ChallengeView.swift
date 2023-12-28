@@ -35,7 +35,12 @@ struct ChallengeView: View {
             Spacer()
 
             ZStack {
-                ProgressView(progress: currentProgress)
+                Gauge(value: 1.0-currentProgress, in: 0...1.0) {
+                    EmptyView()
+                }
+                .gaugeStyle(.accessoryCircularCapacity)
+                .scaleEffect(4)
+                .tint(.red)
 
                 Text(String(format: "%.1f", self.currentCount))
                     .font(.system(size: 48, weight: .black, design: .monospaced))
