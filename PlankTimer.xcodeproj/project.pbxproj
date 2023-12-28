@@ -3,12 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		10213736245D5A82005C93AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10213735245D5A82005C93AD /* AppDelegate.swift */; };
-		10213738245D5A82005C93AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10213737245D5A82005C93AD /* SceneDelegate.swift */; };
 		1021373A245D5A82005C93AD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10213739245D5A82005C93AD /* ContentView.swift */; };
 		1021373C245D5A85005C93AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1021373B245D5A85005C93AD /* Assets.xcassets */; };
 		1021373F245D5A85005C93AD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1021373E245D5A85005C93AD /* Preview Assets.xcassets */; };
@@ -24,6 +22,7 @@
 		1021376D245E9529005C93AD /* ChallengeRecordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1021376C245E9529005C93AD /* ChallengeRecordTests.swift */; };
 		1021376F245E9557005C93AD /* UserDefaultsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1021376E245E9557005C93AD /* UserDefaultsMock.swift */; };
 		10213771246ED3AC005C93AD /* ChallengeMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10213770246ED3AC005C93AD /* ChallengeMenuView.swift */; };
+		10E6E4682B3D2BB7001EC6B1 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E6E4672B3D2BB7001EC6B1 /* App.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +37,6 @@
 
 /* Begin PBXFileReference section */
 		10213732245D5A82005C93AD /* PlankTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlankTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		10213735245D5A82005C93AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		10213737245D5A82005C93AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		10213739245D5A82005C93AD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1021373B245D5A85005C93AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1021373E245D5A85005C93AD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -58,6 +55,7 @@
 		1021376C245E9529005C93AD /* ChallengeRecordTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeRecordTests.swift; sourceTree = "<group>"; };
 		1021376E245E9557005C93AD /* UserDefaultsMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsMock.swift; sourceTree = "<group>"; };
 		10213770246ED3AC005C93AD /* ChallengeMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeMenuView.swift; sourceTree = "<group>"; };
+		10E6E4672B3D2BB7001EC6B1 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +99,7 @@
 			children = (
 				1021375E245D7DE4005C93AD /* Models */,
 				10213757245D5C22005C93AD /* Views */,
-				10213735245D5A82005C93AD /* AppDelegate.swift */,
-				10213737245D5A82005C93AD /* SceneDelegate.swift */,
+				10E6E4672B3D2BB7001EC6B1 /* App.swift */,
 				1021373B245D5A85005C93AD /* Assets.xcassets */,
 				10213740245D5A85005C93AD /* LaunchScreen.storyboard */,
 				10213743245D5A85005C93AD /* Info.plist */,
@@ -205,8 +202,9 @@
 		1021372A245D5A82005C93AD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1140;
-				LastUpgradeCheck = 1140;
+				LastUpgradeCheck = 1510;
 				ORGANIZATIONNAME = epohsoft;
 				TargetAttributes = {
 					10213731245D5A82005C93AD = {
@@ -262,15 +260,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10E6E4682B3D2BB7001EC6B1 /* App.swift in Sources */,
 				10213759245D7CB7005C93AD /* ChallengeView.swift in Sources */,
 				10213760245D7DEF005C93AD /* ViewState.swift in Sources */,
 				1021375B245D7D51005C93AD /* FinishedView.swift in Sources */,
 				10213762245D9F0B005C93AD /* Store.swift in Sources */,
-				10213736245D5A82005C93AD /* AppDelegate.swift in Sources */,
 				1021376A245E91F1005C93AD /* ChallengeRecord.swift in Sources */,
 				1021375D245D7D5F005C93AD /* IntervalView.swift in Sources */,
 				10213766245DA260005C93AD /* ProgressView.swift in Sources */,
-				10213738245D5A82005C93AD /* SceneDelegate.swift in Sources */,
 				10213771246ED3AC005C93AD /* ChallengeMenuView.swift in Sources */,
 				10213768245DC0D7005C93AD /* ChallengeMenu.swift in Sources */,
 				1021373A245D5A82005C93AD /* ContentView.swift in Sources */,
@@ -312,6 +309,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -334,6 +332,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -344,6 +343,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -372,6 +372,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -394,6 +395,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -404,6 +406,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -427,10 +430,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PlankTimer/Preview Content\"";
 				DEVELOPMENT_TEAM = KL3JSFSNXW;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = PlankTimer/Info.plist;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -448,10 +457,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PlankTimer/Preview Content\"";
 				DEVELOPMENT_TEAM = KL3JSFSNXW;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = PlankTimer/Info.plist;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
