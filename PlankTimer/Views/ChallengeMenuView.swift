@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct ChallengeMenuView: View {
-    @Environment(\.presentationMode) var presentationMode
+    @Environment(\.dismiss) private var dismiss
 
     var body: some View {
         NavigationStack {
@@ -33,7 +33,7 @@ struct ChallengeMenuView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                        presentationMode.wrappedValue.dismiss()
+                        dismiss()
                     } label: {
                         Text("完了")
                     }
