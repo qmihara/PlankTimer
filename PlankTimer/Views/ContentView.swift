@@ -14,7 +14,7 @@ struct ContentView: View {
     @State private var isActionSheetPresented = false
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             Group {
                 switch store.viewState {
                 case .challenge(let count):
@@ -25,19 +25,23 @@ struct ContentView: View {
                     IntervalView()
                 }
             }
-            .navigationBarTitle("DAY \(store.days)")
-            .navigationBarItems(
-                leading: Button(action: {
-                    self.isChallengeMenuPresented = true
-                }, label: {
-                    Image(systemName: "flame")
-                }),
-                trailing: Button(action: {
-                    self.isActionSheetPresented = true
-                }, label: {
-                    Image(systemName: "trash")
-                })
-            )
+            .navigationTitle("DAY \(store.days)")
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button {
+                        self.isChallengeMenuPresented = true
+                    } label: {
+                        Image(systemName: "flame")
+                    }
+                }
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        self.isActionSheetPresented = true
+                    } label: {
+                        Image(systemName: "trash")
+                    }
+                }
+            }
         }
         .accentColor(.red)
         .actionSheet(isPresented: $isActionSheetPresented) {

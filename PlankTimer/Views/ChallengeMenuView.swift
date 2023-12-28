@@ -12,7 +12,7 @@ struct ChallengeMenuView: View {
     @Environment(\.presentationMode) var presentationMode
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List(challengeMenu) { item in
                 HStack {
                     Text("DAY \(item.days)")
@@ -28,14 +28,17 @@ struct ChallengeMenuView: View {
                     }
                 }
             }
-            .navigationBarTitle("プランクチャレンジ", displayMode: .inline)
-            .navigationBarItems(
-                trailing: Button(action: {
-                    self.presentationMode.wrappedValue.dismiss()
-                }, label: {
-                    Text("完了")
-                })
-            )
+            .navigationTitle("プランクチャレンジ")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        presentationMode.wrappedValue.dismiss()
+                    } label: {
+                        Text("完了")
+                    }
+                }
+            }
         }
         .accentColor(.red)
     }
