@@ -40,7 +40,6 @@
 		1021373B245D5A85005C93AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1021373E245D5A85005C93AD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		10213741245D5A85005C93AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		10213743245D5A85005C93AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10213748245D5A85005C93AD /* PlankTimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlankTimerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1021374E245D5A85005C93AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10213758245D7CB7005C93AD /* ChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeView.swift; sourceTree = "<group>"; };
@@ -100,7 +99,6 @@
 				10E6E4672B3D2BB7001EC6B1 /* App.swift */,
 				1021373B245D5A85005C93AD /* Assets.xcassets */,
 				10213740245D5A85005C93AD /* LaunchScreen.storyboard */,
-				10213743245D5A85005C93AD /* Info.plist */,
 				1021373D245D5A85005C93AD /* Preview Content */,
 			);
 			path = PlankTimer;
