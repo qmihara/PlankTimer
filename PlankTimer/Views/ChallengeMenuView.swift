@@ -18,13 +18,11 @@ struct ChallengeMenuView: View {
                     Text("DAY \(item.days)")
                         .fontWeight(.heavy)
                     Spacer()
-                    Group<Text> {
-                        switch item.menu {
-                        case .challenge(let count):
-                            return Text("\(count)秒")
-                        case .interval:
-                            return Text("お休み")
-                        }
+                    switch item.menu {
+                    case .challenge(let count):
+                        Text("\(count)秒")
+                    case .interval:
+                        Text("お休み")
                     }
                 }
             }
