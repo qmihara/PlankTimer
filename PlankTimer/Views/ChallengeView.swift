@@ -56,29 +56,48 @@ struct ChallengeView: View {
                 .scaledToFit()
                 .frame(width: 120, height: 150, alignment: .bottom)
 
-            Group<AnyView> {
+            Group {
                 switch state {
                 case .initial:
-                    return AnyView(
-                        Button(action: {
-                            self.startChallenge()
-                        }) {
-                            Text("チャレンジする")
-                                .fontWeight(.black)
-                                .padding()
-                                .frame(maxWidth: .infinity)
-                                .foregroundColor(.white)
-                        }
-                        .background(Color.red)
-                        .cornerRadius(40)
-                        .padding()
-                    )
+                    Button(action: {
+                        self.startChallenge()
+                    }) {
+                        Text("チャレンジする")
+                            .fontWeight(.black)
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .foregroundColor(.white)
+                    }
+                    .background(Color.red)
+                    .cornerRadius(40)
+                    .padding()
                 case .challenging:
-                    return AnyView(
+                    Button(action: {
+                        self.suspendChallenge()
+                    }) {
+                        Text("ストップ")
+                            .fontWeight(.black)
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .foregroundColor(.red)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 40)
+                                    .stroke(Color.red, lineWidth: 2)
+                            )
+                    }
+                    .padding()
+                    .onAppear {
+                        UIApplication.shared.isIdleTimerDisabled = true
+                    }
+                    .onDisappear {
+                        UIApplication.shared.isIdleTimerDisabled = false
+                    }
+                case .suspend:
+                    HStack {
                         Button(action: {
-                            self.suspendChallenge()
+                            self.prepareForRestart()
                         }) {
-                            Text("ストップ")
+                            Text("やり直す")
                                 .fontWeight(.black)
                                 .padding()
                                 .frame(maxWidth: .infinity)
@@ -89,45 +108,20 @@ struct ChallengeView: View {
                                 )
                         }
                         .padding()
-                        .onAppear {
-                            UIApplication.shared.isIdleTimerDisabled = true
-                        }
-                        .onDisappear {
-                            UIApplication.shared.isIdleTimerDisabled = false
-                        }
-                    )
-                case .suspend:
-                    return AnyView(
-                        HStack {
-                            Button(action: {
-                                self.prepareForRestart()
-                            }) {
-                                Text("やり直す")
-                                    .fontWeight(.black)
-                                    .padding()
-                                    .frame(maxWidth: .infinity)
-                                    .foregroundColor(.red)
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 40)
-                                            .stroke(Color.red, lineWidth: 2)
-                                )
-                            }
-                            .padding()
 
-                            Button(action: {
-                                self.startChallenge()
-                            }) {
-                                Text("再開")
-                                    .fontWeight(.black)
-                                    .padding()
-                                    .frame(maxWidth: .infinity)
-                                    .foregroundColor(.white)
-                            }
-                            .background(Color.red)
-                            .cornerRadius(40)
-                            .padding()
+                        Button(action: {
+                            self.startChallenge()
+                        }) {
+                            Text("再開")
+                                .fontWeight(.black)
+                                .padding()
+                                .frame(maxWidth: .infinity)
+                                .foregroundColor(.white)
                         }
-                    )
+                        .background(Color.red)
+                        .cornerRadius(40)
+                        .padding()
+                    }
                 }
             }
         }.onReceive(timer) { _ in

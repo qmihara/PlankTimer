@@ -15,20 +15,14 @@ struct ContentView: View {
 
     var body: some View {
         NavigationView {
-            Group<AnyView> {
+            Group {
                 switch store.viewState {
                 case .challenge(let count):
-                    return AnyView(
-                        ChallengeView(count: count)
-                    )
+                    ChallengeView(count: count)
                 case .finished:
-                    return AnyView(
-                        FinishedView()
-                    )
+                    FinishedView()
                 case .interval:
-                    return AnyView(
-                        IntervalView()
-                    )
+                    IntervalView()
                 }
             }
             .navigationBarTitle("DAY \(store.days)")
