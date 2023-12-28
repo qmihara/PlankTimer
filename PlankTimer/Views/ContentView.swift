@@ -44,17 +44,13 @@ struct ContentView: View {
             }
         }
         .accentColor(.red)
-        .actionSheet(isPresented: $isActionSheetPresented) {
-            ActionSheet(
-                title: Text("記録を削除し1日目からやり直します。"),
-                message: nil,
-                buttons: [
-                    .destructive(Text("記録を削除する")) {
-                        self.store.clearRecord()
-                    },
-                    .cancel(),
-                ]
-            )
+        .confirmationDialog("", isPresented: $isActionSheetPresented) {
+            Button("記録を削除する", role: .destructive) {
+                store.clearRecord()
+            }
+            Button("キャンセル", role: .cancel) {}
+        } message: {
+            Text("記録を削除し1日目からやり直します。")
         }
         .sheet(isPresented: $isChallengeMenuPresented) {
             ChallengeMenuView()
