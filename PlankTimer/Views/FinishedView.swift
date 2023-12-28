@@ -24,9 +24,7 @@ struct FinishedView: View {
 }
 
 #if DEBUG
-struct FinishedView_Previews: PreviewProvider {
-    static var previews: some View {
-        FinishedView()
-    }
+#Preview {
+    FinishedView()
 }
 #endif

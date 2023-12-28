@@ -29,9 +29,8 @@ struct IntervalView: View {
 }
 
 #if DEBUG
-struct IntervalView_Previews: PreviewProvider {
-    static var previews: some View {
-        IntervalView()
-    }
+#Preview {
+    IntervalView()
+        .environmentObject(Store(userDefaults: .standard))
 }
 #endif

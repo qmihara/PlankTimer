@@ -65,15 +65,8 @@ extension ChallengeMenuView {
 }
 
 #if DEBUG
-struct ChallengeMenuView_Previews: PreviewProvider {
-    private static var userDefaults: UserDefaults {
-        let userDefaults = UserDefaults()
-        userDefaults.set(20, forKey: ChallengeRecord.DefaultsKeys.continuationDays)
-        return userDefaults
-    }
-    static var previews: some View {
-        ChallengeMenuView()
-            .environmentObject(Store(userDefaults: userDefaults))
-    }
+#Preview {
+    ChallengeMenuView()
+        .environmentObject(Store(userDefaults: .standard))
 }
 #endif

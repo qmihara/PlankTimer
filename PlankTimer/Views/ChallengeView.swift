@@ -178,9 +178,7 @@ struct ChallengeView: View {
 }
 
 #if DEBUG
-struct ChallengeView_Previews: PreviewProvider {
-    static var previews: some View {
-        ChallengeView(count: 30)
-    }
+#Preview {
+    ChallengeView(count: 30)
 }
 #endif
